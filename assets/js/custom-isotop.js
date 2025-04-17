@@ -1,3 +1,11 @@
+(function() {
+  var script = document.createElement('script');
+  script.src = "https://analytics.ahrefs.com/analytics.js";
+  script.setAttribute("data-key", "YL5wznEh3STXlmF8Jc5rFA");
+  script.async = true;
+  document.head.appendChild(script);
+})();
+
 $(window).on('load', function () {
     // Initialize features
     initializePwaFeatures();
