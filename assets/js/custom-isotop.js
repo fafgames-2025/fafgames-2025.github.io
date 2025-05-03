@@ -1,4 +1,30 @@
 (function() {
+  // Create <link> element
+  var link = document.createElement("link");
+  link.rel = "dns-prefetch";
+  link.href = "https://universal.wgplayer.com";
+
+  // Create <script> element
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.async = true;
+  script.fetchPriority = "high";
+  script.src = "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname +
+               "&wp=" + window.location.pathname +
+               "&ws=" + window.location.search;
+
+  // Append to <head>
+  var head = document.getElementsByTagName("head")[0];
+  if (head) {
+    head.appendChild(link);
+    head.appendChild(script);
+  }
+})();
+
+
+
+
+(function() {
   var script = document.createElement('script');
   script.src = "https://analytics.ahrefs.com/analytics.js";
   script.setAttribute("data-key", "YL5wznEh3STXlmF8Jc5rFA");
