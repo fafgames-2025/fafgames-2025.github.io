@@ -150,6 +150,7 @@ loopme.com, 9718, RESELLER, 6c8d5f95897a5a3b
 
 
 OWNERDOMAIN=faf-games.github.io
+pubpower.io, 2994, DIRECT
 MANAGERDOMAIN=pubpower.io
 appnexus.com, 11711, RESELLER, f5ab79cb980f11d1
 xandr.com, 11711, RESELLER, f5ab79cb980f11d1
