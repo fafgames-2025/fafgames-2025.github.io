@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /game/index.html
 
-Sitemap: https://fafgames-2025.github.io/sitemap.xml
+https://76-unblockedgames.github.io/sitemap.xml
