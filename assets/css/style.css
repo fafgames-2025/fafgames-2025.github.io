@@ -74,17 +74,20 @@ This files contents are outlined below >>>>
             position: relative;
             margin: 20px 0;
         }
+       
         
         #gameSearch {
             padding: 10px;
             font-size: 16px;
-            border: 5px solid #000;
             border-radius: 15px;
+            background-color: #f3f4f6;
+            color: black !important; /* Optional: white text so it's readable */
         }
         
         #gameSearch::placeholder {
-            color: #999;
+            color: black;
         }
+        
         
         #gameSearch:focus {
             outline: none;
@@ -111,7 +114,7 @@ This files contents are outlined below >>>>
         }
 
         .game-item a hover {
-		color: #fff;
+		color: #38d933 !important;
 	}
         
         .game-item a {
@@ -176,6 +179,7 @@ This files contents are outlined below >>>>
 /* Style the search box container */
 .search-container {
   text-align: center;
+  color: whitesmoke !important;
 }
 
 /* Style the search input field */
@@ -225,7 +229,7 @@ This files contents are outlined below >>>>
 
 html {
     overflow-y: scroll !important;
-    scrollbar-color: #ff7a21 #0f0b12;
+    scrollbar-color: #38d933 #0f0b12;
     scrollbar-width: thin;
     overflow-x: hidden
 }
@@ -246,10 +250,10 @@ body::-webkit-scrollbar-thumb {
 body {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 16px;
-    color: #c4c4c4;
+    color: black !important;
     line-height: 1.6em;
     font-weight: 400;
-    background: #0d0e1b;
+    background: #f4f6fa;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     letter-spacing: 0.75px;
@@ -444,15 +448,15 @@ li {
     margin: 30px;
     font-weight: 700;
     display: block;
-    color: #ff7a21;
+    color: #38d933 !important;
     letter-spacing: 0.03em;
     position: relative;
     padding-bottom: 5px;
     -webkit-transition: all 850ms ease;
-    transition: all 850ms ease
+    transition: all 850ms ease;
 }
 
-.site-heading h1:after {
+/* .site-heading h1:after {
     position: absolute;
     content: "";
     width: 0px;
@@ -466,7 +470,8 @@ li {
 	transform: translate(-50%, 100%);
     -webkit-transition: all 850ms ease;
     transition: all 850ms ease
-}
+} */
+
 
 .site-heading h2.extend:after {
     width: 20%
@@ -738,17 +743,18 @@ li {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(8, 3, 37, .4);
+    background-color:  #2e2a47b3 !important;
+    color: white !important;
     z-index: 99;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     padding: 0
 }
 .nav-link:focus, .nav-link:hover {
-    color: #FF7A21;
+    color: greenyellow !important;
 }
 .fag-header.scroll {
-    background: #000 none repeat scroll 0 0;
+    background: #333333 none repeat scroll 0 0;
 }
 
 .dropdown-menu {
@@ -1443,7 +1449,7 @@ span.is-active {
 
 .fag-games-area {
     position: relative;
-    background: #080811 none repeat scroll 0 0;
+    /* background:  black; none repeat scroll 0 0; */
     z-index: 1
 }
 
@@ -1480,7 +1486,8 @@ span.is-active {
     width: 100%;
     height: 100%;
     left: 0;
-    background: #0d0e1b none repeat scroll 0 0;
+    background: white none repeat scroll 0 0;
+    color: white;
     z-index: -1;
     -webkit-transform: skew(40deg);
     transform: skew(40deg);
@@ -1498,13 +1505,15 @@ span.is-active {
     z-index: -1;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background: #ff7a21 none repeat scroll 0 0;
+    background: white none repeat scroll 0 0;
     -webkit-transform: skew(-40deg);
     transform: skew(-40deg);
 }
-
+.projectFilter li a:hover {
+    color: white !important; /* This changes the text color on hover */
+}
 .projectFilter li a:hover:after {
-    background: #ff7a21 none repeat scroll 0 0;
+    background: #38d933 none repeat scroll 0 0;
     -webkit-transform: skew(-40deg);
     transform: skew(-40deg);
 }
@@ -1517,7 +1526,7 @@ span.is-active {
 }
 
 .games-single-item {
-    background: #0d0e1b none repeat scroll 0 0;
+    background: white none repeat scroll 0 0;
     overflow: hidden;
     position: relative;
 }
@@ -1526,9 +1535,15 @@ span.is-active {
     padding: 20px;
     text-align: center;
 }
+.games-desc  h2, a {
+    color: #38d933 !important;
+}
+.footer-text-color{
+    color: white !important;
+}
 
 .games-thumb {
-    position: relative
+    position: relative;
 }
 
 .games-thumb-image {
@@ -1599,7 +1614,7 @@ span.is-active {
     top: 0;
     width: 100%;
     height: 3px;
-    background-color: #ff7a21;
+    background-color: greenyellow;
     left: 0;
     border-radius: 0;
     -webkit-transform: scale(0);
@@ -1717,7 +1732,7 @@ span.is-active {
 }
 
 .game-action a.fag-btn-outline:hover {
-    border: 1px solid #ff7a21
+    border: 1px solid #ff7a21;
 }
 
 /*================================================
@@ -2176,7 +2191,7 @@ span.is-active {
 ==================================================*/
 .fag-footer {
     position: relative;
-    background: url(../img/footer_bg.jpg) no-repeat fixed center center/cover;
+    background: url(../img/footer\ background.jpg) no-repeat fixed center center/cover;
     z-index: 1
 }
 
@@ -2188,9 +2203,10 @@ span.is-active {
     width: 100%;
     height: 100%;
     left: 0;
-    background: #080811 none repeat scroll 0 0;
+    background: #2e2a47b3 !important;
+    color: white !important;
     opacity: 0.9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; */
     z-index: -1;
 }
 
@@ -2200,10 +2216,24 @@ span.is-active {
 }
 .single-footer {
 	margin-top: 30px;
+    text-align: center;
+}
+.single-footer1 h3 {
+    color: white !important;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-top: 32px;
+}
+.single-footer1 p {
+color: #727489;
+    font-size: 16px;
+    margin: 0 0 10px;
 }
 
 .single-footer h3 {
-    color: #fff;
+    color: white !important;
     text-transform: uppercase;
     position: relative;
     font-size: 24px;
@@ -2242,7 +2272,7 @@ span.is-active {
 .footer-contact h4 i {
     width: 25px;
     font-size: 16px;
-    color: #ff7a21;
+    color: #38d933;
 }
 
 .footer-contact h4 {
@@ -2290,7 +2320,7 @@ span.is-active {
     color: #fff;
 }
 .copyright p{
-    margin: 0
+    margin: 0;
 }
 
 /*================================================
@@ -3355,7 +3385,7 @@ button.fag-btn:hover {
 }
 
 .tv-panel-list .nav-pills .nav-link {
-    color: #fff
+    color: #fff;
 }
 
 .tv-panel-list .nav-pills .nav-link.active,
@@ -3575,7 +3605,7 @@ button.fag-btn:hover {
 ==================================================*/
 .match-list-heading h3 {
     color: #fff;
-    text-transform: uppercase;
+    text-transform: uppercase ;
     font-size: 36px;
     margin-bottom: 30px;
     letter-spacing: 0.75px;
@@ -4343,6 +4373,12 @@ button.fag-btn:hover {
     margin-right: 15px;
 }
 
+ul li .nav-link {
+    color: white !important;
+}
+ul li .nav-link:hover {
+    color: green !important;
+}
 .product-panel-list .nav-pills .nav-link.active:after,
 .product-panel-list .nav-pills .show > .nav-link:after {
     position: absolute;
@@ -4831,4 +4867,9 @@ input[type="radio"]:checked ~ label {
 }
 .contact-form-inn form .form-action{
     text-align: center
+}
+
+
+.body-color {
+    color: black;
 }
