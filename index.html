@@ -2,6 +2,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html lang="en-US">
 <head>	
+
+	<style>
+/* .projectFilter ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.projectFilter ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Oval background effect */
+/* .projectFilter ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #00ff73; /* green */
+  /* border-radius: 999px;
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.3s ease, opacity 0.3s ease; */
+/* } */ 
+
+/* Show oval on hover */
+/* .projectFilter ul li a:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+} */
+
+/* Optional: keep background for .current active item */
+/* .projectFilter ul li a.current::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); */
+/* } */ 
+</style>
+
+
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -110,6 +161,10 @@
 
     .discord-button:hover {
     }
+	#popup-id {
+  display: none !important;
+}
+
   </style>
 
 	<script data-cfasync="false">
@@ -133,9 +188,8 @@
     <!-- Header Area Start -->
         <nav class="fag-header navbar navbar-expand-lg">
         <div class="container">
-		<meta name="google-site-verification" content="Fuu6YqTCY6otSESYHv_IteY1RvOGv4vPknuEqRSJWTk" />
            
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="site logo" /></a>
+            <a class="navbar-brand" href="/index.html"><img src="assets/img/logo/logo.png" alt="site logo" style=" width: 80px; height: auto;" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="menu-toggle"></span>
             </button>
@@ -176,7 +230,7 @@
  <div class="search-container">
         <input type="text" id="gameSearch" placeholder="Search 250+ games" oninput="searchGames()">
         <div id="gameList"></div>
-    </div>
+</div>
 </div>
         </div>
     </nav>
@@ -201,7 +255,7 @@
                 <div class="col-12">
                     <div class="site-heading">
                         <h1 class="heading_animation"><span>unblocked games</span></h1>
-                        <p>
+                        <p class="body-color">
                             <strong>What is Unblocked Games? <br></strong>
                              Unblocked games or unblocked games premium that you can play in restricted areas like schools or workplaces. These games are popular with students because they offer fun during breaks or free time. It helps to build important skills like problem-solving, quick reactions, and strategic thinking.  These games are also easily accessible on Chromebooks, school computers, and other devices with internet access, which makes them perfect for a quick game break in between classes. Some games even let you team up with others, making them a good way to socialize and work together. But it is important to balance schoolwork to stay focused and successful in your studies.
 
@@ -224,7 +278,8 @@
 
 
                                <div class="clearfix gamesContainer">
-				<div class="games-item desktop">
+
+										<div class="games-item desktop">
                                   <div class="games-single-item img-contain-isotope">
                                       <div class="games-thumb">
                            <a href="./game/drive-mad.html">
@@ -237,7 +292,8 @@
                      </div>
                   </div>
                </div>
-				<!-- start game item -->
+
+					<!-- start game item -->
 				<div class="games-item desktop">
 				    <div class="games-single-item img-contain-isotope">
 				        <div class="games-thumb">
@@ -252,7 +308,8 @@
 				    </div>
 				</div>
 				<!-- end game item -->
-				       <!-- start game item -->
+
+    <!-- start game item -->
 				<div class="games-item desktop">
 				    <div class="games-single-item img-contain-isotope">
 				        <div class="games-thumb">
@@ -267,7 +324,9 @@
 				    </div>
 				</div>
 				<!-- end game item -->
-				       <div class="games-item desktop">
+				 
+
+                 <div class="games-item desktop">
 				    <div class="games-single-item img-contain-isotope">
 				        <div class="games-thumb">
 				            <a href="./game/basketball-bros.html">
@@ -280,7 +339,9 @@
 				        </div>
 				    </div>
 				</div>
-				       				       <div class="games-item desktop">
+				 
+
+                  <div class="games-item desktop">
 				    <div class="games-single-item img-contain-isotope">
 				        <div class="games-thumb">
 				            <a href="./game/crazy-cattle-3d.html">
@@ -293,6 +354,16 @@
 				        </div>
 				    </div>
 				</div>
+				 
+
+								
+
+				
+				
+				
+				   
+				    
+				       				   
 				
 		                <div class="games-item desktop">
                                 <div class="games-single-item img-contain-isotope">
@@ -1040,7 +1111,7 @@
 		       </div>
 
         <div class="container">
-            <div class="row">		    
+            <div class="row body-color">		    
                 <div class="col-12">
         
 		
@@ -1127,88 +1198,62 @@
 
     <!-- Games Area End -->
     <!-- Footer Area Start -->
-    <footer class="fag-footer">
+    <footer class="fag-footer container">
       <div id="awn-z8463442"></div>
         <div class="footer-top-area">
-
-
-            <div class="container">
+            <div>
                 <div class="row">
-
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="single-footer">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="single-footer1">
                             <h3>About us</h3>
-                <p>Welcome to FAF Games! We create fun and exciting online games for everyone. Our team works hard to make games that are easy to play and full of adventure. Check out our latest games on our <a href="https://fafgames-2025.github.io/">Unblocked Games</a>. Join FAF Games today and start playing!</p>
+                <p class="footer-text-color">Welcome to FAF Games! We create fun and exciting online games for everyone. Our team works hard to make games that are easy to play and full of adventure. Check out our latest games on our <a href="https://fafgames-2025.github.io/">Unblocked Games</a>. Join FAF Games today and start playing!</p>
                         </div>
                     </div>
-
-                    <div class="col-lg-5 col-md-6 col-sm-12">
-                        <div class="widget-content">
-                            <div class="row clearfix">
-                                <div class=" col-lg-6 col-md-6 col-sm-12">
-                                    <div class="single-footer">
+					<div class="col-lg-3">
+                                 <div class="single-footer">
                                         <h3>Tranding Games</h3>
                                         <ul>
-                                            <li><a href="/game/drift-hunters.html"><span class="fa fa-caret-right"></span>Drift Hunters</a></li>
-                                            <li><a href="/game/drift-boss.html"><span class="fa fa-caret-right"></span>Drift Boss</a></li>
-                                            <li><a href="/game/block-blast.html"><span class="fa fa-caret-right"></span>Block Blast</a></li>
-                                            <li><a href="/game/1v1-lol.html"><span class="fa fa-caret-right"></span>1V1.lol Unblocked</a></li>
-                                            <li><a href="/game/eggy-car.html"><span class="fa fa-caret-right"></span>Eggy Car</a></li>
+                                            <li><a href="/game/drift-hunters.html">Drift Hunters</a></li>
+                                            <li><a href="/game/drift-boss.html">Drift Boss</a></li>
+                                            <li><a href="/game/block-blast.html">Block Blast</a></li>
+                                            <li><a href="/game/1v1-lol.html">1V1.lol Unblocked</a></li>
+                                            <li><a href="/game/eggy-car.html">Eggy Car</a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class=" col-lg-6 col-md-6 col-sm-12">
+					           </div>
+
+					 <div class=" col-lg-3 col-md-6 col-sm-12">
                                     <div class="single-footer">
                                         <h3>Top Games</h3>
                                         <ul>
-                                            <li><a href="/game/moto-x3m-bike-race.html"><span class="fa fa-caret-right"></span>Moto X3M</a></li>
-                                            <li><a href="/game/survival-race.html"><span class="fa fa-caret-right"></span>Survival Race</a></li>
-                                            <li><a href="/game/drift-boss.html"><span class="fa fa-caret-right"></span>Drift Boss</a></li>
-                                            <li><a href="/game/idle-breakout.html"><span class="fa fa-caret-right"></span>Idle Breakout</a></li>
-                                            <li><a href="/game/angry-gran-run.html"><span class="fa fa-caret-right"></span>Angry gran Run</a></li>
+                                            <li><a href="/game/moto-x3m-bike-race.html">Moto X3M</a></li>
+                                            <li><a href="/game/survival-race.html">Survival Race</a></li>
+                                            <li><a href="/game/drift-boss.html">Drift Boss</a></li>
+                                            <li><a href="/game/idle-breakout.html">Idle Breakout</a></li>
+                                            <li><a href="/game/angry-gran-run.html">Angry gran Run</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-lg-3 col-md-6 col-sm-12">
-                        <div class="single-footer">
-                            <h3>Contact Us</h3>
-                          <div class="footer-contact">
-    <h4 class="title"><i class="fa fa-envelope"></i> Email Address</h4>
-    <p><a href="mailto:berofen697@inkight.com">georagesmith@gmail.com</a></p>
-</div>
-
-<div class="footer-contact">
-    <h4 class="title"><i class="fab fa-whatsapp"></i> Whatsapp</h4>
-    <p><a href="https://wa.me/447386443403" target="_blank">447386443403</a></p>
-</div>
-<script data-cfasync="false" async src="//cdn.intergient.com/1025408/75283/ramp.js"></script>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container">
+            <div>
                 <div class="row">
                     <div class="col-12">
                         <div class="footer-bottom-inn">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo.png" alt="site logo" />
+                                    <img src="../assets/img/logo/logo.png" alt="site logo" style="width: 150px; height: auto;" />
                                 </a>
                             </div>
                             <div class="footer-social">
                                 <p>
-					<p>Wants to advertise on our Website? <a href="https://wa.me/447386443403" target="_blank">Contact us</a>!</p>
-
-				</p>
+				             </p>
                             </div>
                             <div class="copyright">
-                                <p>&copy; Copyrights 2024 FAF-GAMES - All Rights Reserved</p>
-				    <p>Powered by <a href="https://britishesports.org/nepc/gaming-houses/" target="_blank" rel="noopener"><b>British Esports Federation  </b></a></p>
+                                <p class="text-white">&copy; Copyrights 2024 FAF-GAMES - All Rights Reserved</p>
+				    <p class="text-white">Powered by <a href="https://britishesports.org/nepc/gaming-houses/" target="_blank" rel="noopener"><b>British Esports Federation  </b></a></p>
                             </div>
                         </div>
                     </div>
@@ -1233,7 +1278,7 @@
     <script src="assets/js/nouislider.min.js"></script>
     <!-- Isotop Js -->
     <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/custom-isotop.js"></script>
+    <!-- <script src="assets/js/custom-isotop.js"></script> -->
     <!-- Counter JS -->
     <script src="assets/js/jquery.counterup.min.js"></script>
     <!-- Custom Clock JS -->
