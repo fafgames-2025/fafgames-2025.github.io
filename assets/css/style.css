@@ -1511,9 +1511,15 @@ span.is-active {
 /* .projectFilter li a:hover {
     color: white !important; /* This changes the text color on hover */
 } */
-.projectFilter li a:hover,
-.projectFilter li a.current:hover {
+/* .projectFilter li a:hover {
     background: #38d933 !important;
+    color: #fff !important;
+    border-radius: 50px;
+    padding: 15px !important;
+} */
+
+.projectFilter li a.current:hover{
+	 background: #38d933 !important;
     color: #fff !important;
     border-radius: 50px;
     padding: 15px !important;
