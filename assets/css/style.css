@@ -1489,10 +1489,9 @@ span.is-active {
     background: white none repeat scroll 0 0;
     color: white;
     z-index: -1;
-    -webkit-transform: skew(40deg);
-    transform: skew(40deg);
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    border-radius: 50px;
+    padding: 25px !important;
+    padding-top: 5px !important;
 }
 
 .projectFilter li a.current:after {
@@ -1503,19 +1502,21 @@ span.is-active {
     height: 100%;
     left: 0;
     z-index: -1;
-    -webkit-transition: all 0.3s ease 0s;
+/*     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     background: white none repeat scroll 0 0;
     -webkit-transform: skew(-40deg);
-    transform: skew(-40deg);
+    transform: skew(-40deg); */
 }
-.projectFilter li a:hover {
+/* .projectFilter li a:hover {
     color: white !important; /* This changes the text color on hover */
-}
-.projectFilter li a:hover:after {
-    background: #38d933 none repeat scroll 0 0;
-    -webkit-transform: skew(-40deg);
-    transform: skew(-40deg);
+} */
+.projectFilter li a:hover,
+.projectFilter li a.current:hover {
+    background: #38d933 !important;
+    color: #fff !important;
+    border-radius: 50px;
+    padding: 15px !important;
 }
 
 .games-item {
