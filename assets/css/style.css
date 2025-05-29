@@ -750,9 +750,9 @@ li {
     transition: 0.5s;
     padding: 0
 }
-.nav-link:focus, .nav-link:hover {
+/* .nav-link:focus, .nav-link:hover {
     color: greenyellow !important;
-}
+} */
 .fag-header.scroll {
     background: #333333 none repeat scroll 0 0;
 }
