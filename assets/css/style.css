@@ -1490,8 +1490,6 @@ span.is-active {
     color: white;
     z-index: -1;
     border-radius: 50px;
-    padding: 25px !important;
-    padding-top: 5px !important;
 }
 
 .projectFilter li a.current:after {
@@ -1509,7 +1507,6 @@ span.is-active {
     background: #38d933 !important;
     color: #fff !important;
     border-radius: 50px;
-    padding: 15px !important;
 }
 
 .games-item {
@@ -4370,9 +4367,9 @@ button.fag-btn:hover {
 ul li .nav-link {
     color: white !important;
 }
-ul li .nav-link:hover {
+/* ul li .nav-link:hover {
     color: green !important;
-}
+} */
 .product-panel-list .nav-pills .nav-link.active:after,
 .product-panel-list .nav-pills .show > .nav-link:after {
     position: absolute;
