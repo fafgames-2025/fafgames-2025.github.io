@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             results.forEach(game => {
                 const item = document.createElement("div");
                 item.className = "game-item";
-                item.innerHTML = `<a href="https://faf-games.github.io/${game.url}">${game.name}</a>`;
+                item.innerHTML = `<a href="https://76-unblockedgames.github.io/${game.url}">${game.name}</a>`;
                 gameList.appendChild(item);
             });
         } else {
