@@ -46,15 +46,34 @@ JS INDEX
                 */
 		$("#gameSearch").on("input", function () {
     let input = $(this).val().toLowerCase();
+    let results = [];
+
     $(".game-card").each(function () {
-        let title = $(this).find("h3, h4, .game-title").text().toLowerCase();
+        let title = $(this).data("title").toLowerCase();
         if (title.includes(input)) {
-            $(this).show();
-        } else {
-            $(this).hide();
+            results.push(title);
         }
     });
+
+    let $dropdown = $("#searchResults");
+    $dropdown.empty();
+
+    if (input && results.length) {
+        results.forEach(function (title) {
+            $dropdown.append(`<li>${title}</li>`);
+        });
+        $dropdown.show();
+    } else {
+        $dropdown.hide();
+    }
 });
+
+// Optional: click to fill
+$(document).on("click", "#searchResults li", function () {
+    $("#gameSearch").val($(this).text());
+    $("#searchResults").hide();
+});
+
 
 		/* 
 		=================================================================
