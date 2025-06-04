@@ -367,64 +367,48 @@ document.addEventListener("DOMContentLoaded", function() {
 =================================================
 */
 	 
-const games = [
-  { name: "1v1.lol", url: "../game/1v1-lol.html" },
-  { name: "Apple Shooter", url: "../game/apple-shooter.html" },
-  { name: "Awesome Tanks 2", url: "../game/awesome-tanks-2.html" },
-  { name: "Ballistic", url: "../game/ballistic.html" },
-  { name: "Bullet Force", url: "../game/bullet-force.html" },
-  { name: "Burnin Rubber", url: "../game/burnin-rubber.html" },
-  { name: "Doom 2", url: "../game/doom-2.html" },
-  { name: "Fortnite", url: "../game/fortnite.html" },
-  { name: "Gun Mayhem", url: "../game/gun-mayhem.html" },
-  { name: "Tank Trouble", url: "../game/tank-trouble.html" },
-  { name: "Masked Forces", url: "../game/masked-forces.html" },
-  { name: "Smash Karts", url: "../game/smash-karts.html" },
-  { name: "Rocket Soccer Derby", url: "../game/rocket-soccer-derby.html" },
-  { name: "Gun Blood", url: "../game/gun-blood.html" },
-  { name: "Tower Crash 3D", url: "../game/tower-crash-3d.html" },
-  { name: "Mr Bullet", url: "../game/mr-bullet.html" },
-  { name: "Rooftop Snipers", url: "../game/rooftop-snipers.html" },
-  { name: "Road Fury", url: "../game/road-fury.html" }
-];
+  // Search function
+    document.getElementById("gameSearch").addEventListener("input", function() {
+        const input = this.value.trim().toLowerCase();
+        const gameList = document.getElementById("gameList");
+        
+        gameList.innerHTML = "";
+        gameList.style.display = "block";
 
-const searchInput = document.getElementById("gameSearch");
-const gameList = document.getElementById("gameList");
+        // Hide if empty
+        if (!input) {
+            gameList.style.display = "none";
+            return;
+        }
 
-searchInput.addEventListener("input", function () {
-  const value = this.value.toLowerCase();
-  gameList.innerHTML = "";
+        // Show loading if data isn't ready
+        if (!isDataLoaded) {
+            gameList.innerHTML = "<p>Loading games...</p>";
+            return;
+        }
 
-  if (!value) {
-    gameList.style.display = "none";
-    return;
-  }
+        // Filter games STARTING with input letter
+        const results = games.filter(game => 
+            game.name.toLowerCase().startsWith(input)
+        );
 
-  const filtered = games.filter(g => g.name.toLowerCase().includes(value));
-  if (filtered.length === 0) {
-    gameList.style.display = "none";
-    return;
-  }
-
-  filtered.forEach(g => {
-    const li = document.createElement("li");
-    li.textContent = g.name;
-    li.style.padding = "8px";
-    li.style.cursor = "pointer";
-    li.addEventListener("click", () => {
-      window.location.href = g.url;
+        // Display results
+        if (results.length > 0) {
+            results.forEach(game => {
+                const item = document.createElement("div");
+                item.className = "game-item";
+                item.innerHTML = `<a href="https://76-unblockedgames.github.io/${game.url}">${game.name}</a>`;
+                gameList.appendChild(item);
+            });
+        } else {
+            gameList.innerHTML = "<p>No results found</p>";
+        }
     });
-    gameList.appendChild(li);
-  });
 
-  gameList.style.display = "block";
+    // Close results when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!e.target.closest("#gameSearch, #gameList")) {
+            document.getElementById("gameList").style.display = "none";
+        }
+    });
 });
-
-document.addEventListener("click", function (e) {
-  if (!gameList.contains(e.target) && e.target !== searchInput) {
-    gameList.style.display = "none";
-  }
-});
-
-
-
