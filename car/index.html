@@ -98,9 +98,9 @@
             </ul>
         </li>
     </ul>
-		       <div class="search-container" style="position: relative;">
-    <input type="text" id="gameSearch" placeholder="Search 250+ games" autocomplete="off" style="padding: 6px 12px; border-radius: 4px; width: 200px; border-radius: 10px !important; margin-bottom: 5px !important;">
-    <ul id="gameList" style="list-style: none; margin: 0; padding: 0; position: absolute; background: #0f1320 !important; width: 100%; color: #38d933 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 9999; display: none;"></ul>
+		   <div class="search-container">
+        <input type="text" id="gameSearch" placeholder="Search 250+ games" oninput="searchGames()">
+        <div id="gameList"></div>
 </div>
 </div>
         </div>
@@ -1156,65 +1156,6 @@
     <!--Main js-->
     <script src="../assets/js/main.js"></script>
 
-      <script>
-const games = [
-  { name: "1v1.lol", url: "../game/1v1-lol.html" },
-  { name: "Apple Shooter", url: "../game/apple-shooter.html" },
-  { name: "Awesome Tanks 2", url: "../game/awesome-tanks-2.html" },
-  { name: "Ballistic", url: "../game/ballistic.html" },
-  { name: "Bullet Force", url: "../game/bullet-force.html" },
-  { name: "Burnin Rubber", url: "../game/burnin-rubber.html" },
-  { name: "Doom 2", url: "../game/doom-2.html" },
-  { name: "Fortnite", url: "../game/fortnite.html" },
-  { name: "Gun Mayhem", url: "../game/gun-mayhem.html" },
-  { name: "Tank Trouble", url: "../game/tank-trouble.html" },
-  { name: "Masked Forces", url: "../game/masked-forces.html" },
-  { name: "Smash Karts", url: "../game/smash-karts.html" },
-  { name: "Rocket Soccer Derby", url: "../game/rocket-soccer-derby.html" },
-  { name: "Gun Blood", url: "../game/gun-blood.html" },
-  { name: "Tower Crash 3D", url: "../game/tower-crash-3d.html" },
-  { name: "Mr Bullet", url: "../game/mr-bullet.html" },
-  { name: "Rooftop Snipers", url: "../game/rooftop-snipers.html" },
-  { name: "Road Fury", url: "../game/road-fury.html" }
-];
-
-const searchInput = document.getElementById("gameSearch");
-const gameList = document.getElementById("gameList");
-
-searchInput.addEventListener("input", function () {
-  const value = this.value.toLowerCase();
-  gameList.innerHTML = "";
-
-  if (!value) {
-    gameList.style.display = "none";
-    return;
-  }
-
-  const filtered = games.filter(g => g.name.toLowerCase().includes(value));
-  if (filtered.length === 0) {
-    gameList.style.display = "none";
-    return;
-  }
-
-  filtered.forEach(g => {
-    const li = document.createElement("li");
-    li.textContent = g.name;
-    li.style.padding = "8px";
-    li.style.cursor = "pointer";
-    li.addEventListener("click", () => {
-      window.location.href = g.url;
-    });
-    gameList.appendChild(li);
-  });
-
-  gameList.style.display = "block";
-});
-
-document.addEventListener("click", function (e) {
-  if (!gameList.contains(e.target) && e.target !== searchInput) {
-    gameList.style.display = "none";
-  }
-});
-</script>	
+      
 </body>
 </html>
