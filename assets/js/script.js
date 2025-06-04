@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let isDataLoaded = false;
 
     // Fetch games
-    fetch("https://faf-games.github.io/games.json")
+    fetch("https://76-unblockedgames.github.io/games.json")
         .then(response => {
             if (!response.ok) throw new Error("Network error");
             return response.json();
