@@ -40,6 +40,23 @@ JS INDEX
 		});
 
 		/* 
+                 ================================================================
+                    Game search bar functionality
+		 ================================================================   
+                */
+		$("#gameSearch").on("input", function () {
+    let input = $(this).val().toLowerCase();
+    $(".game-card").each(function () {
+        let title = $(this).find("h3, h4, .game-title").text().toLowerCase();
+        if (title.includes(input)) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+});
+
+		/* 
 		=================================================================
 		02 - Search Toggle
 		=================================================================	
