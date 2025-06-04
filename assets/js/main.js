@@ -366,6 +366,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	search bar code for every page
 =================================================
 */
+document.addEventListener("DOMContentLoaded", function() {
+    let games = [];
+    let isDataLoaded = false;
+
+    // Fetch games
+    fetch("https://76-unblockedgames.github.io/games.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Network error");
+            return response.json();
+        })
+        .then(data => {
+            games = data;
+            isDataLoaded = true;
+        })
+        .catch(error => {
+            console.error("Fetch error:", error);
+            document.getElementById("gameList").innerHTML = "<p>Error loading games</p>";
+        });
+	
 	 
   // Search function
     document.getElementById("gameSearch").addEventListener("input", function() {
