@@ -431,3 +431,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+//  url remove all slashes code below 
+document.querySelectorAll('a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href) {
+    // Ignore full URLs like https:// or http://
+    const cleanedHref = href.replace(/([^:]\/)\/+/g, '$1');
+    link.setAttribute('href', cleanedHref);
+  }
+});
