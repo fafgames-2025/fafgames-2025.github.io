@@ -298,6 +298,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-6BPGNZNTLZ');
+
+	// slashes remove krny k leya 
+	(function() {
+    var currentURL = window.location.href;
+    var cleanedURL = currentURL.replace(/([^:]\/)\/+/g, "$1");
+    if (currentURL !== cleanedURL) {
+      window.location.replace(cleanedURL);
+    }
+  })();
 </script>
    </head>
    <body>
