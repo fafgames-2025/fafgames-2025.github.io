@@ -10,6 +10,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-6BJMQNQ0YV');
+	// slashes remove code start from here
+	 (function() {
+      var currentURL = window.location.href;
+      var cleanedURL = currentURL.replace(/([^:]\/)\/+/g, "$1");
+      if (currentURL !== cleanedURL) {
+        window.location.replace(cleanedURL);
+      }
+    })();
+	// slashes remove code is ended here
 </script>
 	<style>
 /* .projectFilter ul {
@@ -58,6 +67,7 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1); */
 /* } */ 
+		
 </style>
 
 
