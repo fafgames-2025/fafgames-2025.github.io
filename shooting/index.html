@@ -3,6 +3,17 @@
 
 <head>
      <meta name="robots" content="index, follow">
+<!-- 	url link  -->
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href) {
+      const cleanedHref = href.replace(/([^:]\/)\/+/g, '$1');
+      link.setAttribute('href', cleanedHref);
+    }
+  });
+</script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
